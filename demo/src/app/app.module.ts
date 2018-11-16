@@ -161,7 +161,7 @@ import { DemosRadioButtonComponent } from './components/demos-radio-button/demos
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'my-app'}),
     FormsModule,
     RouterModule.forRoot(routes, {
       useHash: true,

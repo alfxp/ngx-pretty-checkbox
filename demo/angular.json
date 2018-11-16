@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pretty-checkbox-demo",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +28,7 @@
               "node_modules/material-design-lite/material.min.css"
             ],
             "scripts": [
-              "node_modules/material-design-lite/material.min.js",
+              "node_modules/material-design-lite/material.min.js"
             ]
           },
           "configurations": {
@@ -51,6 +51,17 @@
             }
           }
         },
+
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          }
+        },
+
+
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
